@@ -1,4 +1,9 @@
 <template>
+  <div>
+    <button @click="locale = 'ru'">RU</button>
+    <button @click="locale = 'en'">EN</button>
+    <button @click="locale = 'fr'">FR</button>
+  </div>
   <router-view />
 </template>
 
