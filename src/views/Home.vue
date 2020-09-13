@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <marquee>
+      <h1>{{ t('name') }}</h1>
+      <h2>{{ t('underConstruction') }}</h2>
+      <p>{{ t('developmentStarted', {on: new Date(1600015610879).toLocaleString()})}}</p>
+    </marquee>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   name: 'Home',
-  components: {
-    HelloWorld,
+  components: {},
+  setup() {
+    return useI18n();
   },
 });
 </script>
