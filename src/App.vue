@@ -1,13 +1,31 @@
 <template>
-  <div>
-    <Button @click="locale = 'ru'">RU</Button>
-    <Button @click="locale = 'en'">EN</Button>
-    <Button @click="locale = 'fr'">FR</Button>
+  <marquee class="notification">
+    <strong>{{ t('underConstruction') }} 🚧🏗👷‍♂️</strong><br>
+    <span>{{ t('developmentStarted', {on: new Date(1600015610879).toLocaleString()})}}</span>
+  </marquee>
+  <div class="container container_slim container_flex">
+    <LanguageSwitcher />
   </div>
   <router-view />
 </template>
 
 <style lang="scss">
+marquee {
+  padding: 1rem;
+  background-color: yellow;
+  margin-bottom: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: monospace, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,16 +34,19 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.container {
+  min-width: 320px;
+  max-width: 640px;
+  text-align: left;
+  margin: 0 auto 1rem;
+  border: 1px solid black;
+  padding: 2rem;
+  &_flex {
+    display: flex;
+    align-items: center;
+  }
+  &_slim {
+    padding: 1rem 2rem;
   }
 }
 </style>
@@ -34,12 +55,12 @@
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import Button from './components/Button.vue';
+import LanguageSwitcher from './components/LanguageSwitcher.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Button,
+    LanguageSwitcher,
   },
   setup() {
     return useI18n();
