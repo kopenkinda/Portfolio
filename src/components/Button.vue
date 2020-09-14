@@ -36,9 +36,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .button {
   all: unset;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 1px solid black;
-  margin: 1rem;
+  margin-right: 1rem;
   transition: all 0.33s;
   cursor: pointer;
   font-weight: bold;

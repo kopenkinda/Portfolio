@@ -1,6 +1,11 @@
 export default {
   name: 'Dmitrii Kopenkin',
-  underConstruction: 'Website is under construction 🔨⚒',
+  desc: `
+  Student at "YNOV Toulouse Campus" 🎓.<br>
+  Huge fan of JavaScript 👨‍💻. <br>
+  Nerd, weeb & knowledge addict 📚. <br>
+  Feel free to contact me via E-Mail or Telegram.`,
+  underConstruction: 'Website is under construction',
   developmentStarted: 'Development started {on}',
   contactMe: 'Get in touch',
   contact: {
