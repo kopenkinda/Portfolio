@@ -1,10 +1,16 @@
 <template>
   <div class="home">
-    <marquee>
+    <div class="container">
       <h1>{{ t('name') }}</h1>
       <h2>{{ t('underConstruction') }}</h2>
       <p>{{ t('developmentStarted', {on: new Date(1600015610879).toLocaleString()})}}</p>
-    </marquee>
+    </div>
+    <div class="container">
+      <h2>{{ t('contactMe') }}</h2>
+      <Button>{{ t('contact.telegram') }}</Button>
+      <Button>{{ t('contact.eMail') }}</Button>
+      <Button>{{ t('contact.twitch') }}</Button>
+    </div>
   </div>
 </template>
 
@@ -12,11 +18,26 @@
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import Button from '../components/Button.vue';
+
 export default defineComponent({
   name: 'Home',
-  components: {},
+  components: {
+    Button,
+  },
   setup() {
     return useI18n();
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.container {
+  min-width: 320px;
+  max-width: 640px;
+  text-align: left;
+  margin: 0 auto 1rem;
+  border: 1px solid black;
+  padding: 2rem;
+}
+</style>

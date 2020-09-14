@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button @click="locale = 'ru'">RU</button>
-    <button @click="locale = 'en'">EN</button>
-    <button @click="locale = 'fr'">FR</button>
+    <Button @click="locale = 'ru'">RU</Button>
+    <Button @click="locale = 'en'">EN</Button>
+    <Button @click="locale = 'fr'">FR</Button>
   </div>
   <router-view />
 </template>
@@ -34,12 +34,12 @@
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import Button from './components/Button.vue';
+
 export default defineComponent({
   name: 'App',
-  data() {
-    return {
-      x: 10,
-    };
+  components: {
+    Button,
   },
   setup() {
     return useI18n();
