@@ -7,9 +7,14 @@
     </div>
     <div class="container">
       <h2>{{ t('contactMe') }}</h2>
-      <Button>{{ t('contact.telegram') }}</Button>
-      <Button>{{ t('contact.eMail') }}</Button>
-      <Button>{{ t('contact.twitch') }}</Button>
+      <Button
+        style="margin-left: 0;"
+        link
+        href="https://t.me/leroifrancais"
+        blank
+      >{{ t('contact.telegram') }}</Button>
+      <Button link href="mailto:hi@kopenkin.tech" blank>{{ t('contact.eMail') }}</Button>
+      <Button link href="https://twitch.tv/DmitriyK_" blank>{{ t('contact.twitch') }}</Button>
     </div>
   </div>
 </template>
