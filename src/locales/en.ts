@@ -13,4 +13,5 @@ export default {
     eMail: 'E-Mail',
     telegram: 'Telegram',
   },
+  projects: 'My Projects',
 };
